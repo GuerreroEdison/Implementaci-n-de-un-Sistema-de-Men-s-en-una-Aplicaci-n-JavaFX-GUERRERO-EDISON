@@ -4,14 +4,12 @@
 
 Explicacion del codigo:
 
-MenuBar y Menús: Se crea una MenuBar (menuBar) y se añaden tres menús principales: "Archivo", "Editar" y "Ayuda".
+Se crea una interfaz de usuario con una barra de menú (menuBar) que incluye tres menús principales: "Archivo", "Editar", y "Ayuda". Cada menú contiene varios elementos de menú (MenuItem), con separadores (SeparatorMenuItem) entre algunos de ellos para mejorar la organización visual.
 
-MenuItems: Dentro de cada menú se añaden varios MenuItem. Además, se utiliza SeparatorMenuItem para agregar separadores entre algunos elementos.
+Cada MenuItem tiene asociada una acción específica utilizando expresiones lambda. Por ejemplo, al seleccionar "Nuevo" en el menú "Archivo", se imprime un mensaje en la consola.
 
-Acciones: Se definen acciones para cada MenuItem utilizando expresiones lambda. Por ejemplo, al seleccionar "Nuevo" se imprime un mensaje en la consola.
+El diseño de la interfaz utiliza un BorderPane (borderPane) como contenedor principal. La MenuBar se sitúa en la parte superior del BorderPane (setTop).
 
-Layout: Se utiliza un BorderPane (borderPane) como layout principal. La MenuBar se coloca en la parte superior (setTop) del BorderPane.
+Para la opción "Acerca de" del menú "Ayuda", se define un método mostrarAcercaDe() que muestra un cuadro de diálogo (Alert) cuando se selecciona esta opción.
 
-Ventana "Acerca de...": Se define un método mostrarAcercaDe() que muestra un Alert cuando se selecciona la opción "Acerca de" del menú Ayuda.
-
-Main y lanzamiento: En el método main, se lanza la aplicación llamando a launch(args).
+En el método main, se inicia la aplicación invocando launch(args) para lanzar la interfaz y manejar las interacciones del usuario.
